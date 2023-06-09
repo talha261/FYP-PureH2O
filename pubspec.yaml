@@ -3,6 +3,8 @@ description: A new Flutter project.
 publish_to: 'none'
 version: 1.0.0+1
 
+
+
 environment:
   sdk: '>=2.19.3 <3.0.0'
 dependencies:
@@ -16,6 +18,9 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
+
+  uses-material-design: true
+
   fonts: 
     - family : Poppins900
       fonts : 
@@ -44,6 +49,14 @@ flutter:
     - family : Poppins800
       fonts : 
       - asset : assets/fonts/Poppins-ExtraBold.ttf
+    
+    - family : Garet-Heavy
+      fonts : 
+      - asset : assets/fonts/Garet-Heavy.ttf
+
+    - family : Garet-Book
+      fonts : 
+      - asset : assets/fonts/Garet-Book.ttf
 
   assets:
     - assets/images/logo.png

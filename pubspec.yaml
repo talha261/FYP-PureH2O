@@ -16,6 +16,34 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
+  fonts: 
+    - family : Poppins900
+      fonts : 
+      - asset : assets/fonts/Poppins-Black.ttf
+
+    - family : Poppins300
+      fonts : 
+      - asset : assets/fonts/Poppins-Light.ttf
+
+    - family : Poppins400
+      fonts : 
+      - asset : assets/fonts/Poppins-Regular.ttf
+
+    - family : Poppins400
+      fonts : 
+      - asset : assets/fonts/Poppins-Medium.ttf
+      
+    - family : Poppins600
+      fonts : 
+      - asset : assets/fonts/Poppins-SemiBold.ttf
+
+    - family : Poppins700
+      fonts : 
+      - asset : assets/fonts/Poppins-Bold.ttf
+
+    - family : Poppins800
+      fonts : 
+      - asset : assets/fonts/Poppins-ExtraBold.ttf
 
   assets:
-    - images/logo.png
+    - assets/images/logo.png

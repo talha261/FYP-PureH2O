@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pureh20/homepage.dart';
 
-import 'main.dart';
-import 'homepage.dart';
+import '../../main.dart';
+import '../../homepage.dart';
 
 class login extends StatefulWidget {
   const login({super.key});

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Screeens/Auth/login.dart';
+import 'Utils/Colors.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -24,12 +25,12 @@ class _SplashState extends State<Splash> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(1, 84, 134, 100),
+      backgroundColor: AppColors.backgroundColor,
       body: Center(
         child: Container(
             padding: const EdgeInsets.all(10.0),
             child: Image.asset(
-              'images/logo.png',
+              'assets/images/logo.png',
               fit: BoxFit.cover,
             )),
       ),

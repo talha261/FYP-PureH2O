@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pureh20/Screeens/Auth/registration.dart';
 import 'package:pureh20/Widgets/CustomButtom.dart';
 import 'package:pureh20/Widgets/TextInput.dart';
 import 'package:pureh20/Screeens/Shop/DashBoard.dart';
@@ -63,10 +64,11 @@ class _loginState extends State<login> {
               // ),
               //Email Text Input
               CustomTextInput(
-                  controller: nameController,
-                  hintText: "Email",
-                  prefixIcon: Icons.email_outlined,
-                  icon: true),
+                controller: nameController,
+                hintText: "Email",
+                prefixIcon: Icons.email_outlined,
+                icon: true,
+              ),
               //Password Text Input
               CustomTextInput(
                 controller: passwordController,
@@ -163,37 +165,21 @@ class _loginState extends State<login> {
                         color: AppColors.buttonColor,
                         fontFamily: "Garet-Book",
                         fontWeight: FontWeight.w500,
-                        fontSize: 13,
+                        fontSize: 15,
                       ),
                     ),
-                    InkWell(
-                      onTap: () => showDialog(
-                        context: context,
-                        builder: (BuildContext context) {
-                          return AlertDialog(
-                            title: const Text('Talha'),
-                            content: const Text(
-                                'Is k on tap pr naviagte karao signup pr'),
-                            actions: [
-                              TextButton(
-                                child: Text('Close'),
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                },
-                              ),
-                            ],
-                          );
-                        },
-                      ),
+                    TextButton(
                       child: const Text(
-                        "Sign Up",
-                        style: TextStyle(
-                          fontFamily: "Garet-Book",
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xffFFB800),
-                        ),
+                        'Sign Up',
+                        style:
+                            TextStyle(fontSize: 20, color: Color(0xffFFB800)),
                       ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => registration()));
+                      },
                     )
                   ],
                 ),

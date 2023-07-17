@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pureh20/Utils/Colors.dart';
 import 'package:pureh20/Widgets/HeaderComponent.dart';
-
+import '../../Widgets/CustomButtom.dart';
 import '../Auth/login.dart';
+import 'inventorygraph.dart';
 
 class homepage extends StatefulWidget {
   const homepage({super.key});
@@ -16,20 +17,29 @@ class _homepageState extends State<homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawerEnableOpenDragGesture: false,
-      body: Container(
-        color: AppColors.backgroundColor,
-        child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 20),
-          child: Column(
-            children: [
-              HeaderComponent(
-                icon: Icons.apple,
-                name: "Developer",
-                onPress: () => Scaffold.of(context).openDrawer(),
-              )
-            ],
+      body: Column(
+        children: [
+          Container(
+            color: AppColors.backgroundColor,
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 20),
+              child: Column(
+                children: [
+                  HeaderComponent(
+                    icon: Icons.apple,
+                    name: "Develop",
+                    onPress: () => Scaffold.of(context).openDrawer(),
+                  )
+                ],
+              ),
+            ),
           ),
-        ),
+          Center(
+            child: Container(
+              child: LineChartWidget(datas),
+            ),
+          ),
+        ],
       ),
       drawer: Drawer(
         child: ListView(
@@ -96,3 +106,8 @@ class _homepageState extends State<homepage> {
     );
   }
 }
+
+// Widget content() {
+//     return Container(
+//       child: LineChartWidget(datas),
+//     );

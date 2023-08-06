@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pureh20/Utils/Colors.dart';
 import 'package:pureh20/Widgets/HeaderComponent.dart';
 import '../../Widgets/CustomButtom.dart';
+import '../../Widgets/inventorygraph.dart';
 import '../Auth/login.dart';
 import '../../Widgets/SalesGraph.dart';
 import '../Common/Profile.dart';
@@ -37,9 +38,14 @@ class _homepageState extends State<homepage> {
           ),
           Center(
             child: Container(
-              child: LineChartSample1(),
+              child: Linegraph(),
             ),
           ),
+          Center(
+            child: Container(
+              child: Inventorygraph(),
+            ),
+          )
         ],
       ),
       drawer: Drawer(

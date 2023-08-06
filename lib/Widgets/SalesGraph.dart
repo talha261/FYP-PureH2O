@@ -258,14 +258,14 @@ class salesgraph extends StatelessWidget {
       );
 }
 
-class LineChartSample1 extends StatefulWidget {
-  const LineChartSample1({super.key});
+class Linegraph extends StatefulWidget {
+  const Linegraph({super.key});
 
   @override
-  State<StatefulWidget> createState() => LineChartSample1State();
+  State<StatefulWidget> createState() => LinegraphState();
 }
 
-class LineChartSample1State extends State<LineChartSample1> {
+class LinegraphState extends State<Linegraph> {
   late bool isShowingMainData;
 
   @override

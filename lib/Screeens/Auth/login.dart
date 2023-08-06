@@ -28,26 +28,28 @@ class _loginState extends State<login> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.only(
-                    left: 10,
-                    right: 10,
-                  ),
-                  child: Image.asset(
-                    'assets/images/logo.png',
-                    fit: BoxFit.cover,
-                  )),
+                alignment: Alignment.center,
+                padding: const EdgeInsets.only(
+                  left: 10,
+                  right: 10,
+                ),
+                child: Image.asset(
+                  'assets/images/logo.png',
+                  fit: BoxFit.cover,
+                ),
+              ),
               Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.all(10),
-                  child: const Text(
-                    'SIGN IN',
-                    style: TextStyle(
-                        fontFamily: "Poppins600",
-                        fontSize: 16,
-                        color: AppColors.subTextColor),
-                    textAlign: TextAlign.center,
-                  )),
+                alignment: Alignment.center,
+                padding: const EdgeInsets.all(10),
+                child: const Text(
+                  'SIGN IN',
+                  style: TextStyle(
+                      fontFamily: "Poppins600",
+                      fontSize: 16,
+                      color: AppColors.subTextColor),
+                  textAlign: TextAlign.center,
+                ),
+              ),
               // Container(
               //   padding: const EdgeInsets.all(10),
               //   child: TextField(
@@ -100,7 +102,7 @@ class _loginState extends State<login> {
                       style: TextStyle(
                         color: AppColors.subTextColor,
                         fontFamily: "Garet-Book",
-                        fontSize: 16,
+                        fontSize: 14,
                       ),
                     ),
                     InkWell(
@@ -125,9 +127,10 @@ class _loginState extends State<login> {
                       child: const Text(
                         "Reset here",
                         style: TextStyle(
-                            fontFamily: "Garet-Book",
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600),
+                          fontFamily: "Garet-Book",
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     )
                   ],
@@ -160,19 +163,22 @@ class _loginState extends State<login> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      'Create a new account  ',
+                      'Create new account',
                       style: TextStyle(
                         color: AppColors.buttonColor,
                         fontFamily: "Garet-Book",
                         fontWeight: FontWeight.w500,
-                        fontSize: 15,
+                        fontSize: 13,
                       ),
                     ),
                     TextButton(
                       child: const Text(
                         'Sign Up',
-                        style:
-                            TextStyle(fontSize: 20, color: Color(0xffFFB800)),
+                        style: TextStyle(
+                            fontSize: 13,
+                            fontFamily: "Garet-Book",
+                            fontWeight: FontWeight.w500,
+                            color: Color(0xffFFB800)),
                       ),
                       onPressed: () {
                         Navigator.push(

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:pureh20/Screeens/Common/Profile.dart';
 import 'package:pureh20/Utils/Colors.dart';
 import 'package:pureh20/Widgets/HeaderComponent.dart';
 import '../../Widgets/CustomButtom.dart';
 import '../Auth/login.dart';
-import 'inventorygraph.dart';
+import '../../Widgets/SalesGraph.dart';
+import '../Common/Profile.dart';
 
 class homepage extends StatefulWidget {
   const homepage({super.key});
@@ -28,7 +28,7 @@ class _homepageState extends State<homepage> {
                 children: [
                   HeaderComponent(
                     icon: Icons.apple,
-                    name: "Developer",
+                    name: "Develop",
                     onPress: () => Scaffold.of(context).openDrawer(),
                   )
                 ],
@@ -37,7 +37,7 @@ class _homepageState extends State<homepage> {
           ),
           Center(
             child: Container(
-              child: LineChartWidget(datas),
+              child: LineChartSample1(),
             ),
           ),
         ],
@@ -56,11 +56,7 @@ class _homepageState extends State<homepage> {
               child: Text(''),
             ),
             ListTile(
-              leading: const Icon(
-                Icons.account_circle,
-                color: AppColors.buttonColor,
-                size: 30,
-              ),
+              leading: const Icon(Icons.face, color: AppColors.buttonColor),
               title: const Text(
                 'Profile',
                 style: TextStyle(
@@ -69,7 +65,7 @@ class _homepageState extends State<homepage> {
                     color: AppColors.buttonColor),
               ),
               onTap: () {
-                Navigator.push(context,
+                Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => ProfileScreen()));
               },
             ),
@@ -80,6 +76,38 @@ class _homepageState extends State<homepage> {
               ),
               title: const Text(
                 'Wallet',
+                style: TextStyle(
+                    fontSize: 16,
+                    fontFamily: "Poppins500",
+                    color: AppColors.buttonColor),
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.notifications_sharp,
+                color: AppColors.buttonColor,
+              ),
+              title: const Text(
+                'Manage sales',
+                style: TextStyle(
+                    fontSize: 16,
+                    fontFamily: "Poppins500",
+                    color: AppColors.buttonColor),
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.handshake,
+                color: AppColors.buttonColor,
+              ),
+              title: const Text(
+                'Manage Inventory',
                 style: TextStyle(
                     fontSize: 16,
                     fontFamily: "Poppins500",

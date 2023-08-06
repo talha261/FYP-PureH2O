@@ -41,7 +41,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     Container(
                       margin: const EdgeInsets.only(left: 10),
-                      child: const Column(
+                      child: Column(
                         children: [
                           Text("Shop Name",
                               style: TextStyle(

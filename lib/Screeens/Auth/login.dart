@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pureh20/Screeens/Auth/registration.dart';
+import 'package:pureh20/Screeens/Auth/verifyEmail.dart';
 import 'package:pureh20/Widgets/CustomButtom.dart';
 import 'package:pureh20/Widgets/TextInput.dart';
 import 'package:pureh20/Screeens/Shop/DashBoard.dart';
@@ -106,24 +107,10 @@ class _loginState extends State<login> {
                       ),
                     ),
                     InkWell(
-                      onTap: () => showDialog(
-                        context: context,
-                        builder: (BuildContext context) {
-                          return AlertDialog(
-                            title: const Text('Talha'),
-                            content: const Text(
-                                'Is k on tap pr naviagte karao verify eamil pr'),
-                            actions: [
-                              TextButton(
-                                child: Text('Close'),
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                },
-                              ),
-                            ],
-                          );
-                        },
-                      ),
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => VerifyEmail())),
                       child: const Text(
                         "Reset here",
                         style: TextStyle(

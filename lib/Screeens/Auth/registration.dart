@@ -161,6 +161,7 @@ class _registrationState extends State<registration> {
                                 builder: (context) => OTPScreen(
                                       email: emailController.text,
                                       otp: "1234",
+                                      type: "register",
                                     )));
                       }),
                   Container(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
+import 'package:pureh20/Screeens/Auth/changePassword.dart';
 import 'package:pureh20/Screeens/Shop/DashBoard.dart';
 import 'package:pureh20/Utils/Colors.dart';
 import 'package:pureh20/Widgets/WhiteButton.dart';
@@ -7,33 +8,28 @@ import 'package:pureh20/Widgets/WhiteButton.dart';
 class OTPScreen extends StatefulWidget {
   final String otp;
   final String email;
-  const OTPScreen({super.key, required this.email, required this.otp});
+  final String type;
+  const OTPScreen(
+      {super.key, required this.email, required this.otp, required this.type});
 
   @override
   State<OTPScreen> createState() => _OTPScreenState();
 }
 
 class _OTPScreenState extends State<OTPScreen> {
+  TextEditingController OTPController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    TextEditingController OTPController = TextEditingController();
     void verifyOTOP() {
       if (OTPController.text == widget.otp) {
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(builder: (context) => homepage()),
-        // );
-        print("testing");
-      } else {
-        showBottomSheet(
-            context: context,
-            builder: (BuildContext context) {
-              return Container(
-                height: 100,
-                width: 100,
-                child: Text("THIS IS MY MODAL"),
-              );
-            });
+        if (widget.type == "register") {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => homepage()));
+        } else {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => ChangePassword()));
+        }
       }
     }
 
@@ -96,19 +92,23 @@ class _OTPScreenState extends State<OTPScreen> {
                   ),
                   child: Column(children: [
                     Container(
-                        margin: const EdgeInsets.symmetric(vertical: 100),
-                        child: Pinput(
-                          controller: OTPController,
-                          defaultPinTheme: PinTheme(
-                              textStyle: const TextStyle(
-                                  fontFamily: "Poppins300", fontSize: 20),
-                              height: 60,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                  color: AppColors.backgroundColor,
-                                  borderRadius: BorderRadius.circular(50))),
-                          autofocus: true,
-                        )),
+                      margin: const EdgeInsets.symmetric(vertical: 100),
+                      child: Pinput(
+                        validator: (value) {
+                          return value == widget.otp ? null : "Incorrect Pin";
+                        },
+                        controller: OTPController,
+                        defaultPinTheme: PinTheme(
+                            textStyle: const TextStyle(
+                                fontFamily: "Poppins300", fontSize: 20),
+                            height: 60,
+                            width: 50,
+                            decoration: BoxDecoration(
+                                color: AppColors.backgroundColor,
+                                borderRadius: BorderRadius.circular(50))),
+                        autofocus: true,
+                      ),
+                    ),
                     WhiteButton(text: "Continue", onPressed: verifyOTOP)
                   ]),
                 )

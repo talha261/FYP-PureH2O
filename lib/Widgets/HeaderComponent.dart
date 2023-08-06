@@ -53,7 +53,7 @@ class HeaderComponent extends StatelessWidget {
           CircleAvatar(
             radius: 30.0,
             backgroundImage: Image.network(
-              "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Fprofile_3135768&psig=AOvVaw2Hue9UBEe0nCCQu6HgAzBs&ust=1686425723249000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNiVhcT3tv8CFQAAAAAdAAAAABAJ",
+              "https://cdn.pixabay.com/photo/2023/07/20/04/45/leva-8138344_1280.jpg",
             ).image, // Provide your image path here
           ),
         ],

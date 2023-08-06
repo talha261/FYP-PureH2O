@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pureh20/Screeens/Common/Profile.dart';
 import 'package:pureh20/Utils/Colors.dart';
 import 'package:pureh20/Widgets/HeaderComponent.dart';
 import '../../Widgets/CustomButtom.dart';
@@ -27,7 +28,7 @@ class _homepageState extends State<homepage> {
                 children: [
                   HeaderComponent(
                     icon: Icons.apple,
-                    name: "Develop",
+                    name: "Developer",
                     onPress: () => Scaffold.of(context).openDrawer(),
                   )
                 ],
@@ -55,7 +56,11 @@ class _homepageState extends State<homepage> {
               child: Text(''),
             ),
             ListTile(
-              leading: const Icon(Icons.face, color: AppColors.buttonColor),
+              leading: const Icon(
+                Icons.account_circle,
+                color: AppColors.buttonColor,
+                size: 30,
+              ),
               title: const Text(
                 'Profile',
                 style: TextStyle(
@@ -64,7 +69,8 @@ class _homepageState extends State<homepage> {
                     color: AppColors.buttonColor),
               ),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ProfileScreen()));
               },
             ),
             ListTile(

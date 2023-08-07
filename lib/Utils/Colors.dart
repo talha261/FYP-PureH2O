@@ -9,4 +9,5 @@ class AppColors {
   static const Color inputTextColor = Color(0xFF122261);
   static const Color buttonColor = Color(0xFF122261);
   static const Color placeHolderColor = Color(0xFFADB4C0);
+  static const Color cardColor = Color(0xFF2DD4BF);
 }

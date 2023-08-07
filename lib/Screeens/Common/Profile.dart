@@ -12,8 +12,12 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  TextEditingController nameController = TextEditingController();
+  TextEditingController shopNameController = TextEditingController();
+  TextEditingController userNameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController addressController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  TextEditingController newPasswordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,39 +29,37 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              HeaderWithBackButton(screenName: "Profile"),
-              Container(
-                child: Row(
-                  children: [
-                    Container(
-                      height: 80,
-                      width: 80,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.network(
-                          "https://cdn.pixabay.com/photo/2023/07/30/00/12/cat-8157889_1280.png",
-                        ),
+              const HeaderWithBackButton(screenName: "Profile"),
+              Row(
+                children: [
+                  SizedBox(
+                    height: 80,
+                    width: 80,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.network(
+                        "https://cdn.pixabay.com/photo/2023/07/30/00/12/cat-8157889_1280.png",
                       ),
                     ),
-                    Container(
-                      margin: const EdgeInsets.only(left: 10),
-                      child: Column(
-                        children: [
-                          Text("Shop Name",
-                              style: TextStyle(
-                                fontFamily: "Poppins600",
-                                fontSize: 15,
-                              )),
-                          Text("Address Of Shop",
-                              style: TextStyle(
-                                fontFamily: "Poppins500",
-                                fontSize: 14,
-                              ))
-                        ],
-                      ),
-                    )
-                  ],
-                ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(left: 10),
+                    child: const Column(
+                      children: [
+                        Text("Shop Name",
+                            style: TextStyle(
+                              fontFamily: "Poppins600",
+                              fontSize: 15,
+                            )),
+                        Text("Address Of Shop",
+                            style: TextStyle(
+                              fontFamily: "Poppins500",
+                              fontSize: 14,
+                            ))
+                      ],
+                    ),
+                  )
+                ],
               ),
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
@@ -70,25 +72,25 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Column(
                   children: [
                     CustomTextInput(
-                      controller: nameController,
+                      controller: shopNameController,
                       hintText: "Shop Name",
                       prefixIcon: Icons.synagogue_outlined,
                       icon: true,
                     ),
                     CustomTextInput(
-                      controller: nameController,
+                      controller: userNameController,
                       hintText: "user Name",
                       prefixIcon: Icons.account_circle_outlined,
                       icon: true,
                     ),
                     CustomTextInput(
-                      controller: nameController,
+                      controller: emailController,
                       hintText: "Email",
                       prefixIcon: Icons.email_outlined,
                       icon: true,
                     ),
                     CustomTextInput(
-                      controller: nameController,
+                      controller: addressController,
                       hintText: "Shop Address",
                       prefixIcon: Icons.synagogue_sharp,
                       icon: true,
@@ -100,8 +102,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       icon: true,
                     ),
                     CustomTextInput(
-                      controller: passwordController,
-                      hintText: "Password",
+                      controller: newPasswordController,
+                      hintText: " New Password",
                       prefixIcon: Icons.lock_outline,
                       icon: true,
                     ),

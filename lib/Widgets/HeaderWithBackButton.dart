@@ -20,7 +20,7 @@ class HeaderWithBackButton extends StatelessWidget {
                 Icons.arrow_back_ios,
                 size: 25,
               ),
-              onPressed: () => Navigator.pop(context),
+              onPressed: () => Navigator.of(context).pop(),
               color: AppColors.buttonColor),
           Container(
             margin: EdgeInsets.only(left: 66),

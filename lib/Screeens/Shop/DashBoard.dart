@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pureh20/Screeens/Common/Wallet.dart';
 import 'package:pureh20/Utils/Colors.dart';
 import 'package:pureh20/Widgets/HeaderComponent.dart';
 import '../../Widgets/CustomButtom.dart';
@@ -71,7 +72,7 @@ class _homepageState extends State<homepage> {
                     color: AppColors.buttonColor),
               ),
               onTap: () {
-                Navigator.pushReplacement(context,
+                Navigator.push(context,
                     MaterialPageRoute(builder: (context) => ProfileScreen()));
               },
             ),
@@ -88,7 +89,8 @@ class _homepageState extends State<homepage> {
                     color: AppColors.buttonColor),
               ),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => WalletScreen()));
               },
             ),
             ListTile(
@@ -136,7 +138,7 @@ class _homepageState extends State<homepage> {
                     color: AppColors.buttonColor),
               ),
               onTap: () {
-                Navigator.pushReplacement(
+                Navigator.pop(
                     context, MaterialPageRoute(builder: (context) => login()));
               },
             ),

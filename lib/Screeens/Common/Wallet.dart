@@ -131,9 +131,9 @@ class _WalletScreenState extends State<WalletScreen> {
                 Container(
                   margin:
                       const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                  child: const Row(
+                  child: Row(
                     children: [
-                      Text(
+                      const Text(
                         "Recent Transections",
                         style:
                             TextStyle(fontFamily: "Poppins600", fontSize: 16),

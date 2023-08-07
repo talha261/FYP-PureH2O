@@ -34,6 +34,7 @@ class WhiteButton extends StatelessWidget {
               text,
               textAlign: TextAlign.center,
               style: const TextStyle(
+                fontSize: 20,
                 color: AppColors.buttonColor,
                 fontFamily: "Poppins500",
               ),

@@ -33,7 +33,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              HeaderWithBackButton(screenName: "Profile"),
+              HeaderWithBackButton(
+                buttonColor: AppColors.buttonColor,
+                screenName: "Profile",
+                backgroundcolor: AppColors.backgroundColor,
+              ),
               Container(
                 child: Row(
                   children: [

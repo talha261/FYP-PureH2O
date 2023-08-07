@@ -3,15 +3,20 @@ import 'package:pureh20/Utils/Colors.dart';
 
 class HeaderWithBackButton extends StatelessWidget {
   final String screenName;
+  final Color backgroundcolor;
+  final Color buttonColor;
 
   // constructor
-  const HeaderWithBackButton({required this.screenName});
+  const HeaderWithBackButton(
+      {required this.screenName,
+      required this.backgroundcolor,
+      required this.buttonColor});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(left: 10, bottom: 20),
-      color: AppColors.backgroundColor,
+      color: backgroundcolor,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -21,12 +26,13 @@ class HeaderWithBackButton extends StatelessWidget {
                 size: 25,
               ),
               onPressed: () => Navigator.of(context).pop(),
-              color: AppColors.buttonColor),
+              color: buttonColor),
           Container(
             margin: EdgeInsets.only(left: 66),
             child: Text(
               screenName,
               style: TextStyle(
+                color: buttonColor,
                 fontFamily: "Poppins600",
                 fontSize: 24,
               ),

@@ -30,7 +30,7 @@ class _homepageState extends State<homepage> {
                 children: [
                   HeaderComponent(
                     icon: Icons.apple,
-                    name: "Develop",
+                    name: "Developer",
                     onPress: () => Scaffold.of(context).openDrawer(),
                   )
                 ],

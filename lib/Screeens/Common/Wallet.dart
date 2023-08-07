@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pureh20/Utils/Colors.dart';
 import 'package:pureh20/Widgets/WhiteButton.dart';
+import 'package:pureh20/Widgets/Withdraw.dart';
 
 class WalletScreen extends StatefulWidget {
   const WalletScreen({super.key});
@@ -76,7 +77,12 @@ class _WalletScreenState extends State<WalletScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               InkWell(
-                                onTap: () => null,
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Withdraw()));
+                                },
                                 child: Column(
                                   children: [
                                     Container(

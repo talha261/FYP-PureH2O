@@ -138,8 +138,8 @@ class _homepageState extends State<homepage> {
                     color: AppColors.buttonColor),
               ),
               onTap: () {
-                Navigator.pop(
-                    context, MaterialPageRoute(builder: (context) => login()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const login()));
               },
             ),
           ],
